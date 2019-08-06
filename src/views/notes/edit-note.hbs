@@ -1,16 +1,7 @@
-{{#each errors}}
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
-  {{text}}
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-{{/each}}
-
 <div class="col-md-4 mx-auto">
-  <div class="card">
+  <div class="card mt-4 text-center">
     <div class="card-header">
-      <h3>Edit Note</h3>
+      <h3 class="mt-2 font-weight-normal">Edit Note</h3>
     </div>
     <div class="card-body">
         {{!-- la nota que me a creado el servidor, colocar su id y hace una cosulta de metodos --}}
@@ -23,7 +14,7 @@
           <textarea name="description" class="form-control">{{note.description}}</textarea>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary btn-block" type="submit">
+          <button class="btn btn-md btn-primary btn-block" type="submit">
             Save
           </button>
         </div>
