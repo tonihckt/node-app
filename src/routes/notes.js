@@ -20,7 +20,7 @@ router.post('/notes/new-note', isAuthenticated, async(req, res)=>{
     if (!title){
         errors.push({text: 'Insert a title'})
     }
-    if (!title){
+    if (!description){
         errors.push({text: 'Insert a description'})
     }
     if (errors.length > 0) {
