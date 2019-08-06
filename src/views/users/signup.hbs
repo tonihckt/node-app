@@ -1,9 +1,11 @@
 <div class="row">
   <div class="col-md-4 mx-auto">
-    <div class="card">
+    <div class="card mt-4 text-center">
       <div class="card-header">
-        Account Register 
+        <h1 class="h3 mt-2 font-weight-normal">Account Register</h1>
       </div>
+        <img class="rounded-circle mx-auto d-block logo m-4" src="/images/logo.svg" alt="Logo" width="80" height="80">
+        {{!-- <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1> --}}
       <div class="card-body">
         <form action="/users/signup" method="POST">
           <div class="form-group">
@@ -18,9 +20,7 @@
           <div class="form-group">
             <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" value="{{confirm_password}}">
           </div>
-          <button class="btn btn-primary btn-block">
-            Signup 
-          </button>
+          <button class="btn btn-lg btn-primary btn-block">Sign up </button>
         </form>
       </div>
     </div>

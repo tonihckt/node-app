@@ -2,11 +2,10 @@
   <div class="col-md-4 mx-auto">
     <div class="card mt-4 text-center">
       <div class="card-header">
-        <h1 class="h4">
-          Account Login
-        </h1>
+        <h1 class="h3 mt-2 font-weight-normal">Account Login</h1>
       </div>
-        <img class="rounded-circle mx-auto d-block logo m-4" src="/img/logo.png" alt="Logo">
+        <img class="rounded-circle mx-auto d-block logo m-4" src="/images/logo.svg" alt="Logo" width="80" height="80">
+        {{!-- <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1> --}}
       <div class="card-body">
         <form action="/users/signin" method="POST">
           <div class="form-group">
@@ -15,9 +14,12 @@
           <div class="form-group">
             <input type="password" class="form-control" name="password" placeholder="Password">
           </div>
-          <button class="btn btn-primary btn-block">
-            Signin 
-          </button>
+          {{!-- <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div> --}}
+          <button class="btn btn-lg btn-primary btn-block">Sign in</button>
         </form>
       </div>
     </div>
