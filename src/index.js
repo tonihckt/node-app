@@ -10,6 +10,7 @@ const express = require('express')
 const path = require('path')
 const hbs  = require('express-handlebars')
 const methodOverride = require("method-override")
+const bodyParser = require('body-parser')
 const session = require('express-session')
 const flash = require('connect-flash') // muestra mensajes
 const passport = require ('passport') // inicia session con redes sociales
@@ -45,6 +46,8 @@ app.set('view engine', '.hbs')
 app.use(express.urlencoded({
     extended: false,
 }))
+// app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json()) // admite formato json
 app.use(methodOverride('_method'))
 app.use(session({
     secret: 'mySecretApp',
@@ -73,7 +76,9 @@ app.use((req,res,next)=>{
  * ROUTES
 */
 app.use(require('./routes/index'))
+app.use(require('./routes/dashboard'))
 app.use(require('./routes/notes'))
+app.use(require('./routes/posts'))
 app.use(require('./routes/users'))
 
 
