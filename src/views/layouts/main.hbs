@@ -9,16 +9,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="/stylesheets/main.css">
     <title>Wecker</title>
 </head>
 <body>
+    {{!-- <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div> --}}
+    
     {{> navbar-top}}
 
     {{> messages }}     {{!-- agrega los partials/messages --}}
     {{> errors }}
-    <main class="container">
+    <main class="container-fluid">
     {{{ body }}}
     </main>
 
@@ -29,5 +32,6 @@
     <script src="/libs/jquery/jquery-3.3.1.slim.min.js"></script>
     <script src="/libs/popper/popper.min.js"></script>
     <script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/JavaScripts/functions.js"></script>
   </body>
 </html>

@@ -1,12 +1,98 @@
-/* @import 'carousel.css'; */
+@import 'loading.css';
+@import 'navbar.css';
+@import 'spinner-clock.css';
+@import 'spinner-eclipse.css';
+@import 'carousel.css';
+@import 'icons-grid.css';
+@import 'products.css';
+@import 'masterhead.css';
+@import './fonts/lineIcons.css';
 
 
 body{
     background: rgb(184,236,188);
     background: linear-gradient(0deg, rgba(184,236,188,1) 0%, rgba(100,221,244,1) 100%);
+    font-family: Nunito;
+    letter-spacing: .0625em;
 }
 
 .navbar-custom{
     background: rgb(100,221,244);
     background: linear-gradient(0deg, rgba(100,221,244,1) 0%, rgba(184,236,188,1) 100%);
+}
+
+.center{
+    align-items: center;
+}
+
+.card-image{
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; 
+    padding: 1.25rem;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    /* background: transparent; */
+    border: 2px solid;
+}
+
+
+#contact_form input[type=text], #contact_form textarea {
+    -webkit-appearance: none;
+    border: 0;
+    border-bottom: 1px solid #DBE1EC;
+    margin: 0;
+    /* padding: 12px 0; */
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    resize: none;
+    transition: all 200ms ease-in-out;
+    color: #16364f;
+}
+
+#contact_form textarea {
+    min-height: 104px;
+    padding-right: 50px;
+}
+
+#contact_form input[type=text], #contact_form textarea, #contact_form label {
+    font-size: 22px;
+    line-height: normal;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+textarea {
+    overflow: auto;
+}
+
+#contact .about p {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 28px;
+    color: #16364f;
+    line-height: 1.6;
+    padding-right: 90px;
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+
+#contact .contact p {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 38px;
+    color: #16364f;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: .5px;
 }
