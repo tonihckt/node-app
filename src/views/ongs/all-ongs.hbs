@@ -1,6 +1,7 @@
 <section class="album py-2 bg-light">
     <div class="container">
       <div class="row">
+        {{#each ongs}}
         <div class="col-md-4">
           <div class="card shadow-sm center">
             <div class="card-image">
@@ -9,19 +10,38 @@
                 </div>
             </div>
             <div class="card-body">
-                <h4 class="card-title text-center">Card title</h4>
+                <h4 class="card-title text-center">{{name}}</h4>
                 {{!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> --}}
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">{{description}}</p>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                <div class="row btn-group">
+                  <a href="/ongs/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                  {{!-- <a href=""><i class="fas fa-trash"></i></a> --}}
+                  <!-- DELETE REQUEST -->
+                  <form action="/ongs/delete/{{_id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger btn-block  ">Delete</button>
+                  </form>
                 </div>
                 <small class="text-muted">9 mins</small>
               </div>
-            </div>
           </div>
-        </div>
+        </div> 
+        {{else}}
+        <div class="card mx-auto mt-4 text-center">
+            <div class="card-body">
+              <h1>Hello! {{user.name}}</h1>
+              <span class="fa-stack fa-lg mb-2">
+                <i class="far fa-smile-wink fa-stack-2x"></i>
+              </span>
+              <p class="lead">There are not Ong yet.</p>
+              <a href="/ongs/add" class="btn btn-success btn-block btn-md">Create One!</a>
+            </div>
+        </div>     
+        {{/each}}
       </div>
     </div>
 </section>

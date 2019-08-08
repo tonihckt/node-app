@@ -8,6 +8,7 @@ const PostSchema = new Schema ({
     description: {type: String, require: true},
     content: {type: String, require: true},
     image: {type: String, require: true},
+    tag: {type: String, require: true},
     autor: {
         id: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
         usermane:{type: String, require: true},

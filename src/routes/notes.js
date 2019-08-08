@@ -67,7 +67,7 @@ router.put('/notes/edit-note/:id', isAuthenticated, async(req, res)=>{
 })
 
 
-/*
+/* 
  * DELETE_NOTES
 */
 router.delete('/notes/delete/:id', isAuthenticated, async(req, res)=>{
